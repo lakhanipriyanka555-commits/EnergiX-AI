@@ -53,5 +53,31 @@ Notes
 - Add a `.gitignore` if you want to exclude virtualenv files and secrets.
 - Update this README with architecture details and deployment instructions.
 
+## Deployment — Streamlit Community Cloud
+
+EnergiX-AI is a Streamlit app and can be deployed directly to Streamlit Community Cloud (share.streamlit.io). Steps:
+
+1. Ensure `requirements.txt` includes `streamlit` and any other dependencies. Install locally to verify.
+
+2. Make sure `app.py` is at the repository root (it is). Commit and push your branch (already pushed to GitHub).
+
+3. Create a Streamlit Community Cloud app:
+	- Visit https://share.streamlit.io and sign in with GitHub.
+	- Click **New app**, select your repository, branch `main`, and the `app.py` file.
+	- Click **Deploy**.
+
+4. Set secrets (environment variables) in the Streamlit app settings for Supabase and any API keys, for example:
+
+```
+SUPABASE_URL=<your-supabase-url>
+SUPABASE_KEY=<your-supabase-service-role-or-api-key>
+```
+
+5. If your app needs additional system packages, add a `packages.txt` file in the repo root listing them.
+
+Notes & troubleshooting:
+- The app uses Supabase; ensure your database is provisioned and run the SQL in `database/supabase_setup.sql` if needed.
+- Streamlit Cloud runs a persistent container; if you need larger resources or private networking, consider Render, Fly.io, or a Docker-based host.
+
 License
 - MIT (add your preferred license file)
