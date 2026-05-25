@@ -12,8 +12,7 @@ streamlit-extras>=0.4.0
 altair>=5.0.0
 pyarrow>=14.0.0
 supabase==2.15.1
-gotrue>=2.9,<3
-postgrest>=0.17,<0.20
-storage3>=0.9,<0.11
-supafunc>=0.5,<0.8
 httpx>=0.26,<0.28
+python-dotenv>=1.0.0
+psycopg2-binary>=2.9.9
+requests>=2.31.0
