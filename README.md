@@ -2,6 +2,21 @@
 
 Energy analytics dashboard and forecasting tools built with Python.
 
+## Description
+
+EnergiX-AI is a modular energy analytics platform that helps teams and researchers explore, forecast, and optimize energy usage. It provides:
+
+- Interactive dashboards for visualizing time series energy data and KPIs.
+- Forecasting tools using ML models to predict demand and generation.
+- Anomaly detection to flag unusual consumption or sensor readings.
+- Real-time data views for streaming/near-real-time metrics.
+- Optimization components for scenario analysis and cost/consumption minimization.
+
+The codebase is organized to separate data ingestion, modeling, visualization, and persistence. It includes utilities for synthetic data generation, charting helpers, and integrations with Supabase for storage and simple auth.
+
+Use cases: building operational dashboards, prototyping forecasting models, conducting energy optimization experiments, and monitoring deployments in pilot projects.
+
+
 Contents
 - `app.py` — Streamlit/Dash/FastAPI entry (project root)
 - `pages/` — web pages (dashboard, forecasting, realtime, etc.)
